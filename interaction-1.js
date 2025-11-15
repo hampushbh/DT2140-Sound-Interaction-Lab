@@ -102,7 +102,7 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
-    dspNode.setParamValue("/thunder/rumble", 1)
+    dspNode.setParamValue("bubble1", 1)
     setTimeout(() => { dspNode.setParamValue("/thunder/rumble", 0) }, 100);
 }
 
