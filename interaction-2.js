@@ -37,6 +37,7 @@ bubble1.createDSP(audioContext, 1024)
         // // ALWAYS PAY ATTENTION TO MIN AND MAX, ELSE YOU MAY GET REALLY HIGH VOLUMES FROM YOUR SPEAKERS
         // const [exampleMinValue, exampleMaxValue] = getParamMinMax(exampleMinMaxParam);
         // console.log('Min value:', exampleMinValue, 'Max value:', exampleMaxValue);
+        console.log("JSON params:", JSON.stringify(jsonParams, null, 2));
     });
 
 
