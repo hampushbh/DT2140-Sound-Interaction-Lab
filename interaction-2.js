@@ -103,7 +103,7 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
-    dspNode.setParamValue("/bubble1/drop", 1)
+    dspNode.setParamValue("/bubble1/drop", 10)
     setTimeout(() => { dspNode.setParamValue("/bubble1/drop", 0) }, 100);
 }
 
