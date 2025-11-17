@@ -10,7 +10,7 @@
 let dspNode = null;
 let dspNodeParams = null;
 let jsonParams = null;
-//let movetime = null;
+let movetime = null;
 
 // Change here to ("tuono") depending on your wasm file name
 const dspName = "rain1";
@@ -61,7 +61,10 @@ function rotationChange(rotx, roty, rotz) {
 }
 
 function mousePressed() {
+    console.log("millis")
+    console.log(millis())
     playAudio()
+
     // Use this for debugging from the desktop!
 }
 
