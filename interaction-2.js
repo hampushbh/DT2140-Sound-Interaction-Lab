@@ -74,7 +74,7 @@ function deviceMoved() {
     if (accelerationZ < 18.0) {
         movetime = null;
     }
-    else if (millis()- movetime > 1000) {
+    else if (millis()- movetime > 200) {
         playAudio();
 
     }
