@@ -67,7 +67,10 @@ function mousePressed() {
 function deviceMoved() {
     movetimer = millis();
     statusLabels[2].style("color", "pink");
-    playAudio();
+    if (accelerationZ > 18.0) {
+        playAudio();
+
+    }
 }
 
 function deviceTurned() {
@@ -106,7 +109,7 @@ function playAudio() {
     }
     dspNode.setParamValue("/rain1/rain/density", 0.6);  
     dspNode.setParamValue("/rain1/rain/volume", 0.7);
-    setTimeout(() => { dspNode.setParamValue("/rain1/rain/density", 0) }, 100);
+    setTimeout(() => { dspNode.setParamValue("/rain1/rain/density", 0) }, 300);
 }
 
 //==========================================================================================
