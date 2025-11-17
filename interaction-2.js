@@ -10,7 +10,7 @@
 let dspNode = null;
 let dspNodeParams = null;
 let jsonParams = null;
-let movetime = null;
+//let movetime = null;
 
 // Change here to ("tuono") depending on your wasm file name
 const dspName = "rain1";
@@ -66,17 +66,20 @@ function mousePressed() {
 }
 
 function deviceMoved() {
-    if (movetime == null) {
-        movetime = millis();
-    }
+    // if (movetime == null) {
+    //     movetime = millis();
+    // }
     statusLabels[2].style("color", "pink");
 
-    if (accelerationZ < 18.0) {
-        movetime = null;
-    }
-    else if (millis()- movetime > 200) {
-        playAudio();
+    // if (accelerationZ < 18.0) {
+    //     movetime = null;
+    // }
+    // else if (millis()- movetime > 200) {
+    //     playAudio();
 
+    // }
+    if (accelerationZ > 18.0) {
+        playAudio();
     }
 }
 
