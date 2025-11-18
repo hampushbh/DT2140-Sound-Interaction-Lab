@@ -56,7 +56,7 @@ function accelerationChange(accx, accy, accz) {
 }
 
 function rotationChange(rotx, roty, rotz) {
-    if (Math.abs(rotz) > 1 && Math.abs(rotx) < 2 && Math.abs(roty) < 2) {
+    if (Math.abs(rotz) > 50 && Math.abs(rotx) < 2 && Math.abs(roty) < 2) {
         playAudio()
     }
 }
@@ -106,7 +106,7 @@ function playAudio() {
         return;
     }
     dspNode.setParamValue("/engine1/gate", 1)
-    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 1000);
+    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 50);
 }
 
 //==========================================================================================
