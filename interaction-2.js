@@ -61,8 +61,14 @@ function rotationChange(rotx, roty, rotz) {
 }
 
 function mousePressed() {
+    console.log("movetime")
+    console.log(movetime)
     console.log("millis")
     console.log(millis())
+    if (movetime == null) {
+        movetime = millis();
+    }
+
     playAudio()
 
     // Use this for debugging from the desktop!
