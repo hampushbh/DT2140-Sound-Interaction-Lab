@@ -75,21 +75,21 @@ function mousePressed() {
 }
 
 function deviceMoved() {
-    // if (movetime == null) {
-    //     movetime = millis();
-    // }
+    if (movetime == null) {
+        movetime = millis();
+    }
     statusLabels[2].style("color", "pink");
 
-    // if (accelerationZ < 18.0) {
-    //     movetime = null;
-    // }
-    // else if (millis()- movetime > 200) {
-    //     playAudio();
-
-    // }
-    if (accelerationZ > 18.0) {
-        playAudio();
+    if (accelerationZ < 17.0) {
+        movetime = null;
     }
+    else if (millis()- movetime > 200) {
+        playAudio();
+
+    }
+    // if (accelerationZ > 18.0) {
+    //     playAudio();
+    // }
 }
 
 function deviceTurned() {
