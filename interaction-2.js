@@ -80,7 +80,7 @@ function deviceMoved() {
     }
     statusLabels[2].style("color", "pink");
 
-    if (accelerationZ < 17.0) {
+    if (accelerationZ < 15.0) {
         movetime = null;
     }
     else if (millis()- movetime > 200) {
