@@ -56,6 +56,9 @@ function accelerationChange(accx, accy, accz) {
 }
 
 function rotationChange(rotx, roty, rotz) {
+    if (rotz > 0) {
+        playAudio()
+    }
 }
 
 function mousePressed() {
@@ -72,9 +75,9 @@ function deviceTurned() {
     threshVals[1] = turnAxis;
 }
 function deviceShaken() {
-    shaketimer = millis();
-    statusLabels[0].style("color", "pink");
-    playAudio();
+    // shaketimer = millis();
+    // statusLabels[0].style("color", "pink");
+    // playAudio();
 }
 
 function getMinMaxParam(address) {
