@@ -10,6 +10,7 @@
 let dspNode = null;
 let dspNodeParams = null;
 let jsonParams = null;
+let lastRotz = null;
 
 // Change here to ("tuono") depending on your wasm file name
 const dspName = "engine1";
@@ -56,9 +57,13 @@ function accelerationChange(accx, accy, accz) {
 }
 
 function rotationChange(rotx, roty, rotz) {
-    if (Math.abs(rotz) > 50 && Math.abs(rotx) < 2 && Math.abs(roty) < 2) {
-        playAudio()
+    if (lastRotz != null) {
+        if (Math.abs(rotz-lastRotz) > 1 && Math.abs(rotx) < 2 && Math.abs(roty) < 2) {
+            playAudio()
+        }
     }
+    lastRotz = rotz
+    
 }
 
 function mousePressed() {
