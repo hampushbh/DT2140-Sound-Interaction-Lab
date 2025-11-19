@@ -13,7 +13,7 @@ let jsonParams = null;
 let lastRotz = null;
 
 // Change here to ("tuono") depending on your wasm file name
-const dspName = "wikiwiki";
+const dspName = "brass";
 const instance = new FaustWasm2ScriptProcessor(dspName);
 
 // output to window or npm package module
@@ -26,7 +26,7 @@ if (typeof module === "undefined") {
 }
 
 // The name should be the same as the WASM file, so change tuono with brass if you use brass.wasm
-wikiwiki.createDSP(audioContext, 1024)
+brass.createDSP(audioContext, 1024)
     .then(node => {
         dspNode = node;
         dspNode.connect(audioContext.destination);
@@ -110,18 +110,18 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
-    dspNode.setParamValue("/wikiwiki/blower/pressure", 0.3)
-    dspNode.setParamValue("/wikiwiki/brassModel/tubeLength", 0.1)
-    setTimeout(() => { dspNode.setParamValue("/wikiwiki/blower/pressure", 0) }, 1);
-    dspNode.setParamValue("/wikiwiki/blower/pressure", 0.3)
-    dspNode.setParamValue("/wikiwiki/brassModel/tubeLength", 1)
-    setTimeout(() => { dspNode.setParamValue("/wikiwiki/blower/pressure", 0) }, 1);
-    dspNode.setParamValue("/wikiwiki/blower/pressure", 0.3)
-    dspNode.setParamValue("/wikiwiki/brassModel/tubeLength", 0.1)
-    setTimeout(() => { dspNode.setParamValue("/wikiwiki/blower/pressure", 0) }, 1);
-    dspNode.setParamValue("/wikiwiki/blower/pressure", 0.3)
-    dspNode.setParamValue("/wikiwiki/brassModel/tubeLength", 1)
-    setTimeout(() => { dspNode.setParamValue("/wikiwiki/blower/pressure", 0) }, 1);
+    dspNode.setParamValue("/brass/blower/pressure", 0.3)
+    dspNode.setParamValue("/brass/brassModel/tubeLength", 0.1)
+    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 1);
+    dspNode.setParamValue("/brass/blower/pressure", 0.3)
+    dspNode.setParamValue("/brass/brassModel/tubeLength", 1)
+    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 1);
+    dspNode.setParamValue("/brass/blower/pressure", 0.3)
+    dspNode.setParamValue("/brass/brassModel/tubeLength", 0.1)
+    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 1);
+    dspNode.setParamValue("/brass/blower/pressure", 0.3)
+    dspNode.setParamValue("/brass/brassModel/tubeLength", 1)
+    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 1);
 }
 
 //==========================================================================================
