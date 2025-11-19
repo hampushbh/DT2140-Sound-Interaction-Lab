@@ -81,12 +81,12 @@ function deviceMoved() {
         movetime = millis();
     }
     statusLabels[2].style("color", "pink");
-
-    if (Math.sqrt(accelerationZ**2+accelerationY**2+accelerationX**2) < 20.0) {
+    acc = Math.sqrt(accelerationZ**2+accelerationY**2+accelerationX**2)
+    if ( acc < 20.0) {
         movetime = null;
     }
     else if (millis()- movetime > 200) {
-        playAudio();
+        playAudio(acc);
 
     }
     // if (accelerationZ > 18.0) {
