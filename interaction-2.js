@@ -70,7 +70,7 @@ function mousePressed() {
     //     movetime = millis();
     // }
 
-    // playAudio()
+    playAudio()
 
     // Use this for debugging from the desktop!
 }

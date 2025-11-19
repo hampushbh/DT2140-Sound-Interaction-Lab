@@ -13,7 +13,7 @@ let jsonParams = null;
 let lastRotz = null;
 
 // Change here to ("tuono") depending on your wasm file name
-const dspName = "engine1";
+const dspName = "wikiwiki";
 const instance = new FaustWasm2ScriptProcessor(dspName);
 
 // output to window or npm package module
@@ -26,7 +26,7 @@ if (typeof module === "undefined") {
 }
 
 // The name should be the same as the WASM file, so change tuono with brass if you use brass.wasm
-engine1.createDSP(audioContext, 1024)
+wikiwiki.createDSP(audioContext, 1024)
     .then(node => {
         dspNode = node;
         dspNode.connect(audioContext.destination);
@@ -110,18 +110,18 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
-    dspNode.setParamValue("/engine1/gate", 1)
-    dspNode.setParamValue("/engine1/maxSpeed", 0.8)
-    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 0.5);
-    dspNode.setParamValue("/engine1/gate", 1)
-    dspNode.setParamValue("/engine1/maxSpeed", 0.2)
-    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 0.5);
-    dspNode.setParamValue("/engine1/gate", 1)
-    dspNode.setParamValue("/engine1/maxSpeed", 0.8)
-    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 0.5);
-    dspNode.setParamValue("/engine1/gate", 1)
-    dspNode.setParamValue("/engine1/maxSpeed", 0.2)
-    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 0.5);
+    dspNode.setParamValue("/wikiwiki/pressure", 0.3)
+    dspNode.setParamValue("/wikiwiki/tubeLength", 0.1)
+    setTimeout(() => { dspNode.setParamValue("/wikiwiki/pressure", 0) }, 0.5);
+    dspNode.setParamValue("/wikiwiki/gate", 1)
+    dspNode.setParamValue("/wikiwiki/tubeLength", 0.2)
+    setTimeout(() => { dspNode.setParamValue("/wikiwiki/pressure", 0) }, 0.5);
+    dspNode.setParamValue("/wikiwiki/gate", 1)
+    dspNode.setParamValue("/wikiwiki/tubeLength", 0.8)
+    setTimeout(() => { dspNode.setParamValue("/wikiwiki/pressure", 0) }, 0.5);
+    dspNode.setParamValue("/wikiwiki/gate", 1)
+    dspNode.setParamValue("/wikiwiki/tubeLength", 0.2)
+    setTimeout(() => { dspNode.setParamValue("/wikiwiki/pressure", 0) }, 0.5);
 }
 
 //==========================================================================================
