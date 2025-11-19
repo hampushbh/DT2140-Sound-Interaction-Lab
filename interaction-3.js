@@ -110,19 +110,20 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
-    console.log("playAudio 2")
-    dspNode.setParamValue("/brass/blower/pressure", 0.3)
+    console.log("playAudio 3")
+    randint = Math.random()
+    dspNode.setParamValue("/brass/blower/pressure", randint)
     dspNode.setParamValue("/brass/brassModel/tubeLength", 0.1)
-    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 500);
-    dspNode.setParamValue("/brass/blower/pressure", 0.3)
-    dspNode.setParamValue("/brass/brassModel/tubeLength", 1)
-    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 500);
-    dspNode.setParamValue("/brass/blower/pressure", 0.3)
-    dspNode.setParamValue("/brass/brassModel/tubeLength", 0.1)
-    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 500);
-    dspNode.setParamValue("/brass/blower/pressure", 0.3)
-    dspNode.setParamValue("/brass/brassModel/tubeLength", 1)
-    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 500);
+    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 100);
+    // dspNode.setParamValue("/brass/blower/pressure", 0.3)
+    // dspNode.setParamValue("/brass/brassModel/tubeLength", 1)
+    // setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 500);
+    // dspNode.setParamValue("/brass/blower/pressure", 0.3)
+    // dspNode.setParamValue("/brass/brassModel/tubeLength", 0.1)
+    // setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 500);
+    // dspNode.setParamValue("/brass/blower/pressure", 0.3)
+    // dspNode.setParamValue("/brass/brassModel/tubeLength", 1)
+    // setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 500);
 }
 
 //==========================================================================================
