@@ -82,7 +82,7 @@ function deviceMoved() {
     }
     statusLabels[2].style("color", "pink");
     acc = Math.sqrt(accelerationY**2+accelerationX**2)
-    if (Math.abs(accelerationZ) < 0.5)
+    if (Math.abs(accelerationZ) < 0.5 && acc > 5)
         playAudio(acc)
     // if ( acc < 5.0) {
     //     movetime = null;
@@ -131,9 +131,9 @@ function playAudio(acc) {
     if (audioContext.state === 'suspended') {
         return;
     }
-    console.log("playAudio6");
+    console.log("playAudio7");
     console.log(acc/30);
-    dspNode.setParamValue("/door/door/position", acc/30);
+    dspNode.setParamValue("/door/door/position", acc/15);
     dspNode.setParamValue("/door/volume", 1);  
     setTimeout(() => { dspNode.setParamValue("/door/door/position", 0) }, 1000);
 }
