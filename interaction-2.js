@@ -133,7 +133,7 @@ function playAudio() {
     dspNode.setParamValue("/fast/rain/volume", 0.6);
     dspNode.setParamValue("/fast/numPartials",70)
     dspNode.setParamValue("/fast/gate",1)
-    setTimeout(() => { dspNode.setParamValue("/fast/gate", 0) }, 50);
+    setTimeout(() => { dspNode.setParamValue("/fast/gate", 0) }, 1000);
 }
 
 //==========================================================================================
