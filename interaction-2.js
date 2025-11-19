@@ -14,7 +14,7 @@ let movetime = null;
 
 
 // Change here to ("tuono") depending on your wasm file name
-const dspName = "rain1";
+const dspName = "fast";
 const instance = new FaustWasm2ScriptProcessor(dspName);
 
 // output to window or npm package module
@@ -27,7 +27,7 @@ if (typeof module === "undefined") {
 }
 
 // The name should be the same as the WASM file, so change tuono with brass if you use brass.wasm
-rain1.createDSP(audioContext, 1024)
+fast.createDSP(audioContext, 1024)
     .then(node => {
         dspNode = node;
         dspNode.connect(audioContext.destination);
@@ -81,10 +81,10 @@ function deviceMoved() {
     }
     statusLabels[2].style("color", "pink");
 
-    if (Math.sqrt(accelerationZ**2+accelerationY**2+accelerationX**2) < 20.0) {
+    if (Math.cbrt(accelerationZ**2+accelerationY**2+accelerationX**2) < 20.0) {
         movetime = null;
     }
-    else if (millis()- movetime > 100) {
+    else if (millis()- movetime > 200) {
         playAudio();
 
     }
@@ -127,10 +127,12 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
-    
-    dspNode.setParamValue("/rain1/rain/density", 0.6);  
-    dspNode.setParamValue("/rain1/rain/volume", 0.7);
-    setTimeout(() => { dspNode.setParamValue("/rain1/rain/density", 0) }, 500);
+
+    dspNode.setParamValue("/fast/freq", 700);  
+    dspNode.setParamValue("/fast/rain/volume", 0.6);
+    dspNode.setParamValue("/fast/numPartials",70)
+    dspNode.setParamValue("/fast/gate",1)
+    setTimeout(() => { dspNode.setParamValue("/fast/gate", 0) }, 50);
 }
 
 //==========================================================================================
