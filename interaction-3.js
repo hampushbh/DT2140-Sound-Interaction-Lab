@@ -110,11 +110,11 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
-    console.log("playAudio 4")
-    randint = Math.random()
+    console.log("playAudio 5")
+    randint = Math.random()*2
     console.log(randint)
-    dspNode.setParamValue("/brass/blower/pressure", randint)
-    dspNode.setParamValue("/brass/brassModel/tubeLength", 0.1)
+    dspNode.setParamValue("/brass/blower/pressure", 0.3)
+    dspNode.setParamValue("/brass/brassModel/tubeLength", randint)
     setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 100);
     // dspNode.setParamValue("/brass/blower/pressure", 0.3)
     // dspNode.setParamValue("/brass/brassModel/tubeLength", 1)
