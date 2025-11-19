@@ -128,7 +128,7 @@ function playAudio(acc) {
     if (audioContext.state === 'suspended') {
         return;
     }
-    console.log("playAudio4");
+    console.log("playAudio5");
     console.log(acc/30);
     dspNode.setParamValue("/door/door/position", acc/30);
     dspNode.setParamValue("/door/volume", 1);  
