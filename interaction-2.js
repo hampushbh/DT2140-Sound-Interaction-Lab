@@ -12,6 +12,7 @@ let dspNodeParams = null;
 let jsonParams = null;
 let movetime = null;
 
+
 // Change here to ("tuono") depending on your wasm file name
 const dspName = "rain1";
 const instance = new FaustWasm2ScriptProcessor(dspName);
@@ -80,10 +81,10 @@ function deviceMoved() {
     }
     statusLabels[2].style("color", "pink");
 
-    if (accelerationZ < 15.0) {
+    if (Math.sqrt(accelerationZ**2+accelerationY**2+accelerationX**2) < 20.0) {
         movetime = null;
     }
-    else if (millis()- movetime > 200) {
+    else if (millis()- movetime > 100) {
         playAudio();
 
     }
