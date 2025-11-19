@@ -58,7 +58,7 @@ function accelerationChange(accx, accy, accz) {
 
 function rotationChange(rotx, roty, rotz) {
     if (lastRotz != null) {
-        if (Math.abs(rotz-lastRotz) > 5 && Math.abs(rotx) < 2 && Math.abs(roty) < 2) {
+        if (Math.abs(rotz-lastRotz) > 2 && Math.abs(rotx) < 2 && Math.abs(roty) < 2) {
             playAudio()
         }
     }
@@ -110,7 +110,7 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
-    console.log("playAudio")
+    console.log("playAudio 2")
     dspNode.setParamValue("/brass/blower/pressure", 0.3)
     dspNode.setParamValue("/brass/brassModel/tubeLength", 0.1)
     setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 500);
