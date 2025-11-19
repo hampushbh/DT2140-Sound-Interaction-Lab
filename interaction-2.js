@@ -82,13 +82,15 @@ function deviceMoved() {
     }
     statusLabels[2].style("color", "pink");
     acc = Math.sqrt(accelerationZ**2+accelerationY**2+accelerationX**2)
-    if ( acc < 20.0) {
-        movetime = null;
-    }
-    else if (millis()- movetime > 200) {
-        playAudio(acc);
+    playAudio(acc)
+    // if ( acc < 5.0) {
+    //     movetime = null;
+    // }
+    
+    // else if (millis()- movetime > 50) {
+    //     //playAudio(acc);
 
-    }
+    // }
     // if (accelerationZ > 18.0) {
     //     playAudio();
     // }
