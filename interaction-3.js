@@ -114,13 +114,13 @@ function playAudio() {
     dspNode.setParamValue("/wikiwiki/tubeLength", 0.1)
     setTimeout(() => { dspNode.setParamValue("/wikiwiki/pressure", 0) }, 0.5);
     dspNode.setParamValue("/wikiwiki/gate", 1)
-    dspNode.setParamValue("/wikiwiki/tubeLength", 0.2)
+    dspNode.setParamValue("/wikiwiki/tubeLength", 1)
     setTimeout(() => { dspNode.setParamValue("/wikiwiki/pressure", 0) }, 0.5);
     dspNode.setParamValue("/wikiwiki/gate", 1)
-    dspNode.setParamValue("/wikiwiki/tubeLength", 0.8)
+    dspNode.setParamValue("/wikiwiki/tubeLength", 0.1)
     setTimeout(() => { dspNode.setParamValue("/wikiwiki/pressure", 0) }, 0.5);
     dspNode.setParamValue("/wikiwiki/gate", 1)
-    dspNode.setParamValue("/wikiwiki/tubeLength", 0.2)
+    dspNode.setParamValue("/wikiwiki/tubeLength", 1)
     setTimeout(() => { dspNode.setParamValue("/wikiwiki/pressure", 0) }, 0.5);
 }
 
