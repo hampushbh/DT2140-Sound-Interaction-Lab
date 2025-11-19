@@ -14,7 +14,7 @@ let movetime = null;
 
 
 // Change here to ("tuono") depending on your wasm file name
-const dspName = "fast";
+const dspName = "additiveplus";
 const instance = new FaustWasm2ScriptProcessor(dspName);
 
 // output to window or npm package module
@@ -27,7 +27,7 @@ if (typeof module === "undefined") {
 }
 
 // The name should be the same as the WASM file, so change tuono with brass if you use brass.wasm
-fast.createDSP(audioContext, 1024)
+additiveplus.createDSP(audioContext, 1024)
     .then(node => {
         dspNode = node;
         dspNode.connect(audioContext.destination);
@@ -129,11 +129,11 @@ function playAudio() {
         return;
     }
     console.log("playAudio")
-    dspNode.setParamValue("/fast/freq", 700);  
-    dspNode.setParamValue("/fast/rain/volume", 0.6);
-    dspNode.setParamValue("/fast/numPartials",70)
-    dspNode.setParamValue("/fast/gate",1)
-    setTimeout(() => { dspNode.setParamValue("/fast/gate", 0) }, 1000);
+    dspNode.setParamValue("/additiveplus/freq", 700);  
+    dspNode.setParamValue("/additiveplus/rain/volume", 0.6);
+    dspNode.setParamValue("/additiveplus/numPartials",70)
+    dspNode.setParamValue("/additiveplus/gate",1)
+    setTimeout(() => { dspNode.setParamValue("/additiveplus/gate", 0) }, 1000);
 }
 
 //==========================================================================================

@@ -113,16 +113,16 @@ function playAudio() {
     console.log("playAudio")
     dspNode.setParamValue("/brass/blower/pressure", 0.3)
     dspNode.setParamValue("/brass/brassModel/tubeLength", 0.1)
-    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 100);
+    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 500);
     dspNode.setParamValue("/brass/blower/pressure", 0.3)
     dspNode.setParamValue("/brass/brassModel/tubeLength", 1)
-    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 100);
+    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 500);
     dspNode.setParamValue("/brass/blower/pressure", 0.3)
     dspNode.setParamValue("/brass/brassModel/tubeLength", 0.1)
-    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 100);
+    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 500);
     dspNode.setParamValue("/brass/blower/pressure", 0.3)
     dspNode.setParamValue("/brass/brassModel/tubeLength", 1)
-    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 100);
+    setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 500);
 }
 
 //==========================================================================================
