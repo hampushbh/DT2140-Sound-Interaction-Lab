@@ -110,8 +110,9 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
-    console.log("playAudio 3")
+    console.log("playAudio 4")
     randint = Math.random()
+    console.log(randint)
     dspNode.setParamValue("/brass/blower/pressure", randint)
     dspNode.setParamValue("/brass/brassModel/tubeLength", 0.1)
     setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 100);
