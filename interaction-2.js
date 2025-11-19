@@ -128,10 +128,10 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
-    console.log("playAudio")
+    console.log("playAudio1")
     dspNode.setParamValue("/additiveplus/freq", 700);  
-    dspNode.setParamValue("/additiveplus/rain/volume", 0.6);
-    dspNode.setParamValue("/additiveplus/numPartials",70)
+    dspNode.setParamValue("/additiveplus/gain", 0.6);
+    dspNode.setParamValue("/additiveplus/num_partials",70)
     dspNode.setParamValue("/additiveplus/gate",1)
     setTimeout(() => { dspNode.setParamValue("/additiveplus/gate", 0) }, 1000);
 }
