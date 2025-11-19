@@ -62,7 +62,7 @@ function rotationChange(rotx, roty, rotz) {
 }
 
 function mousePressed() {
-    playAudio()
+    playAudio(20)
     // console.log("movetime")
     // console.log(movetime)
     // console.log("millis")
