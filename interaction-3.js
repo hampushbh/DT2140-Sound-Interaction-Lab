@@ -67,12 +67,12 @@ function rotationChange(rotx, roty, rotz) {
 }
 
 function mousePressed() {
-    playAudio(mouseX/windowWidth)
+    //playAudio(mouseX/windowWidth)
     // Use this for debugging from the desktop!
 }
 
 function deviceMoved() {
-    movetimer = millis();
+    // movetimer = millis();
     statusLabels[2].style("color", "pink");
 }
 
@@ -81,7 +81,7 @@ function deviceTurned() {
 }
 function deviceShaken() {
     // shaketimer = millis();
-    // statusLabels[0].style("color", "pink");
+    statusLabels[0].style("color", "pink");
     // playAudio();
 }
 
