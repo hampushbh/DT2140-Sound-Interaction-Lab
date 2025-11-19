@@ -136,7 +136,7 @@ function playAudio(acc) {
     console.log(acc/30);
     dspNode.setParamValue("/door/door/position", acc/15);
     dspNode.setParamValue("/door/volume", 1);  
-    setTimeout(() => { dspNode.setParamValue("/door/volume", 0) }, 10);
+    setTimeout(() => { dspNode.setParamValue("/door/volume", 0) }, 100);
 }
 
 //==========================================================================================
