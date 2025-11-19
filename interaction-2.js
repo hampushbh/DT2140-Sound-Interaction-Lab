@@ -60,8 +60,8 @@ function accelerationChange(accx, accy, accz) {
 
 function rotationChange(rotx, roty, rotz) {
 
-    if (Math.abs(rotz-90)<10){
-        acc = Math.sqrt(accelerationY**2+accelerationX**2)
+    if (Math.abs(rotx-90)<10){
+        acc = Math.sqrt(accelerationY**2+accelerationz**2)
         if (acc > 5) {
             playAudio()
         }
