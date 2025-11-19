@@ -110,6 +110,7 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
+    console.log("playAudio")
     dspNode.setParamValue("/brass/blower/pressure", 0.3)
     dspNode.setParamValue("/brass/brassModel/tubeLength", 0.1)
     setTimeout(() => { dspNode.setParamValue("/brass/blower/pressure", 0) }, 1);
