@@ -110,18 +110,18 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
-    dspNode.setParamValue("/wikiwiki/pressure", 0.3)
-    dspNode.setParamValue("/wikiwiki/tubeLength", 0.1)
-    setTimeout(() => { dspNode.setParamValue("/wikiwiki/pressure", 0) }, 0.5);
-    dspNode.setParamValue("/wikiwiki/gate", 1)
-    dspNode.setParamValue("/wikiwiki/tubeLength", 1)
-    setTimeout(() => { dspNode.setParamValue("/wikiwiki/pressure", 0) }, 0.5);
-    dspNode.setParamValue("/wikiwiki/gate", 1)
-    dspNode.setParamValue("/wikiwiki/tubeLength", 0.1)
-    setTimeout(() => { dspNode.setParamValue("/wikiwiki/pressure", 0) }, 0.5);
-    dspNode.setParamValue("/wikiwiki/gate", 1)
-    dspNode.setParamValue("/wikiwiki/tubeLength", 1)
-    setTimeout(() => { dspNode.setParamValue("/wikiwiki/pressure", 0) }, 0.5);
+    dspNode.setParamValue("/wikiwiki/blower/pressure", 0.3)
+    dspNode.setParamValue("/wikiwiki/brassModel/tubeLength", 0.1)
+    setTimeout(() => { dspNode.setParamValue("/wikiwiki/blower/pressure", 0) }, 1);
+    dspNode.setParamValue("/wikiwiki/blower/pressure", 0.3)
+    dspNode.setParamValue("/wikiwiki/brassModel/tubeLength", 1)
+    setTimeout(() => { dspNode.setParamValue("/wikiwiki/blower/pressure", 0) }, 1);
+    dspNode.setParamValue("/wikiwiki/blower/pressure", 0.3)
+    dspNode.setParamValue("/wikiwiki/brassModel/tubeLength", 0.1)
+    setTimeout(() => { dspNode.setParamValue("/wikiwiki/blower/pressure", 0) }, 1);
+    dspNode.setParamValue("/wikiwiki/blower/pressure", 0.3)
+    dspNode.setParamValue("/wikiwiki/brassModel/tubeLength", 1)
+    setTimeout(() => { dspNode.setParamValue("/wikiwiki/blower/pressure", 0) }, 1);
 }
 
 //==========================================================================================
