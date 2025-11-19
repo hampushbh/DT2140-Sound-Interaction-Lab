@@ -127,6 +127,7 @@ function playAudio() {
     if (audioContext.state === 'suspended') {
         return;
     }
+    
     dspNode.setParamValue("/rain1/rain/density", 0.6);  
     dspNode.setParamValue("/rain1/rain/volume", 0.7);
     setTimeout(() => { dspNode.setParamValue("/rain1/rain/density", 0) }, 500);

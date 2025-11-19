@@ -112,16 +112,16 @@ function playAudio() {
     }
     dspNode.setParamValue("/engine1/gate", 1)
     dspNode.setParamValue("/engine1/maxSpeed", 0.8)
-    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 2);
+    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 0.5);
     dspNode.setParamValue("/engine1/gate", 1)
     dspNode.setParamValue("/engine1/maxSpeed", 0.2)
-    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 2);
+    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 0.5);
     dspNode.setParamValue("/engine1/gate", 1)
     dspNode.setParamValue("/engine1/maxSpeed", 0.8)
-    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 2);
+    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 0.5);
     dspNode.setParamValue("/engine1/gate", 1)
     dspNode.setParamValue("/engine1/maxSpeed", 0.2)
-    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 2);
+    setTimeout(() => { dspNode.setParamValue("/engine1/gate", 0) }, 0.5);
 }
 
 //==========================================================================================
